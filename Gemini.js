@@ -23,7 +23,7 @@ async function generateInfo() {
     };
   
     try {
-      const response = await fetch(
+      const responsee = await fetch(
         "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyAensOkVRbHVydAJAiyX6Em-6HRHCTpUU8",
         {
           method: "POST",
@@ -34,7 +34,7 @@ async function generateInfo() {
         }
       );
   
-      const result = await response.json();
+      const result = await responsee.json();
       console.log("Response:", result.candidates[0].content.parts[0].text);
   
       // Display API response
